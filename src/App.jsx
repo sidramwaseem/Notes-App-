@@ -1,9 +1,11 @@
 import React from "react";
+import "./App.css";
+import NoteContainer from "./components/NoteContainer/NoteContainer";
 
 export default function App() {
   return(
-    <div>
-    <p>Working</p>
+    <div className="App">
+    <NoteContainer />
     </div>
   );
 }
