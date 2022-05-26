@@ -1,3 +1,6 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
 .note{
   padding: 25px;
   height: 200px;
@@ -26,4 +29,11 @@
 
 .note_footer img{
   width:25px;
+  cursor:pointer;
+  opacity:0;
+  transition:300ms;
+}
+
+.note:hover .note_footer img{
+  opacity:1;
 }
