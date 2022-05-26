@@ -4,6 +4,8 @@ import "./Note.css";
 
 function Note(props) {
 
+  let timer = 500, timeout;
+
   const formatDate = (value) =>{
     if(!value) return ""
 
@@ -25,10 +27,19 @@ function Note(props) {
     
   }
 
+  const debounce = (func) =>{
+    clearTimeout(timeout)
+    timeout = setTimeout(func, timer)
+  } 
+
+  const updateText=(text,id)=>{
+    debounce(()=>props.updateText(text,id))
+  }
+
   return (
     <div className="note" style={{ backgroundColor: props.note.color }}>
       <textarea className="note_text" defaultValue={props.note.text} 
-      // onChange={(event)=>{}}
+      onChange={(event)=>updateText(event.target.value,props.note.id)}
       />
       <div className="note_footer">
         <p>{formatDate(props.note.time)}</p>
