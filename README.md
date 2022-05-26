@@ -1,5 +1,8 @@
 # Notes App - React
 
+### Demo
+Preview: https://notesapp-react-app.netlify.app/
+
 ## Built with:
 - HTML
 - CSS
