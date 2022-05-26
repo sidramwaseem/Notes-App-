@@ -17,3 +17,13 @@
   outline: none;
   border: none;
 }
+
+.note_footer{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note_footer img{
+  width:25px;
+}
